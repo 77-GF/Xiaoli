@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人中心 - 小米商城</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-left">
+      <a href="index.html">小米商城</a><span>|</span>
+      <a href="javascript:;">MIUI</a><span>|</span>
+      <a href="javascript:;">IoT</a>
+    </div>
+    <div class="top-right">
+      <a href="login.html">登录</a><span style="color:#424242">|</span>
+      <a href="login.html">注册</a>
+      <a href="cart.html" class="cart-link">&#128722; 购物车<span class="cart-count" id="cartCount">0</span></a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="index.html">MI</a></div>
+    <ul class="nav-menu">
+      <li><a href="products.html">全部商品</a></li>
+      <li><a href="products.html?cat=phone">手机</a></li>
+      <li><a href="products.html?cat=tv">电视</a></li>
+      <li><a href="products.html?cat=laptop">笔记本</a></li>
+      <li><a href="products.html?cat=pad">平板</a></li>
+      <li><a href="products.html?cat=watch">穿戴</a></li>
+      <li><a href="products.html?cat=home">智能家居</a></li>
+      <li><a href="products.html?cat=audio">耳机音箱</a></li>
+    </ul>
+    <div class="header-search">
+      <input type="text" placeholder="搜索小米商品">
+      <button>&#128269;</button>
+    </div>
+  </div>
+</header>
+
+<div class="user-page">
+  <div class="container user-main">
+
+    <!-- 左侧导航 -->
+    <aside class="user-sidebar">
+      <div class="user-avatar">
+        <div class="avatar-img">&#128100;</div>
+        <div class="user-name">小米用户</div>
+      </div>
+      <nav class="user-menu">
+        <a href="javascript:;" class="active" data-tab="orders">我的订单</a>
+        <a href="javascript:;" data-tab="profile">个人信息</a>
+        <a href="javascript:;" data-tab="address">收货地址</a>
+        <a href="javascript:;" data-tab="fav">我的收藏</a>
+        <a href="javascript:;" data-tab="coupon">优惠券</a>
+        <a href="login.html" style="color:#e94560">退出登录</a>
+      </nav>
+    </aside>
+
+    <!-- 右侧内容 -->
+    <div class="user-content">
+
+      <!-- 我的订单 -->
+      <div class="user-card tab-panel active" id="panel-orders">
+        <h3>我的订单</h3>
+        <div class="order-list">
+          <div class="order-item">
+            <div class="order-header">
+              <span>订单号: 20251220001</span><span>2025-12-20 14:32</span>
+            </div>
+            <div class="order-body">
+              <div class="order-img" style="background:#1a1a2e">&#128241;</div>
+              <div class="order-info">
+                <h4>小米 15 Pro 5G</h4>
+                <p>12+256GB 黑色</p>
+              </div>
+              <div class="order-price">¥4999</div>
+              <div class="order-status">已完成</div>
+              <div class="order-actions">
+                <button class="btn btn-outline-sm">查看详情</button>
+                <button class="btn btn-outline-sm">再次购买</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="order-header">
+              <span>订单号: 20251218002</span><span>2025-12-18 10:15</span>
+            </div>
+            <div class="order-body">
+              <div class="order-img" style="background:#0f3460">&#128187;</div>
+              <div class="order-info">
+                <h4>Redmi Book Pro 16</h4>
+                <p>i9/16GB/1TB</p>
+              </div>
+              <div class="order-price">¥6999</div>
+              <div class="order-status">已发货</div>
+              <div class="order-actions">
+                <button class="btn btn-outline-sm">查看物流</button>
+                <button class="btn btn-outline-sm">确认收货</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="order-header">
+              <span>订单号: 20251215003</span><span>2025-12-15 09:48</span>
+            </div>
+            <div class="order-body">
+              <div class="order-img" style="background:#ff6700">&#127911;</div>
+              <div class="order-info">
+                <h4>Xiaomi Buds 5 Pro</h4>
+                <p>陶瓷白 标准版</p>
+              </div>
+              <div class="order-price">¥699</div>
+              <div class="order-status">已完成</div>
+              <div class="order-actions">
+                <button class="btn btn-outline-sm">查看详情</button>
+                <button class="btn btn-outline-sm">评价</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-item">
+            <div class="order-header">
+              <span>订单号: 20251210004</span><span>2025-12-10 16:22</span>
+            </div>
+            <div class="order-body">
+              <div class="order-img" style="background:#e94560">&#128267;</div>
+              <div class="order-info">
+                <h4>Xiaomi 充电宝 20000mAh</h4>
+                <p>白色</p>
+              </div>
+              <div class="order-price">¥249</div>
+              <div class="order-status">已完成</div>
+              <div class="order-actions">
+                <button class="btn btn-outline-sm">查看详情</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 个人信息 -->
+      <div class="user-card tab-panel" id="panel-profile" style="display:none">
+        <h3>个人信息</h3>
+        <table style="width:100%;border-collapse:collapse">
+          <tr><td style="padding:14px 0;border-bottom:1px solid #f0f0f0;color:#999;width:120px">昵称</td><td style="padding:14px 0;border-bottom:1px solid #f0f0f0">小米用户</td></tr>
+          <tr><td style="padding:14px 0;border-bottom:1px solid #f0f0f0;color:#999">手机号</td><td style="padding:14px 0;border-bottom:1px solid #f0f0f0">138****8888</td></tr>
+          <tr><td style="padding:14px 0;border-bottom:1px solid #f0f0f0;color:#999">邮箱</td><td style="padding:14px 0;border-bottom:1px solid #f0f0f0">mi***@xiaomi.com</td></tr>
+          <tr><td style="padding:14px 0;border-bottom:1px solid #f0f0f0;color:#999">注册时间</td><td style="padding:14px 0;border-bottom:1px solid #f0f0f0">2024-03-15</td></tr>
+        </table>
+      </div>
+
+      <!-- 收货地址 -->
+      <div class="user-card tab-panel" id="panel-address" style="display:none">
+        <h3>收货地址</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px">
+          <div style="border:1px solid #ff6700;border-radius:8px;padding:16px;position:relative">
+            <span style="position:absolute;top:8px;right:12px;background:#ff6700;color:#fff;font-size:11px;padding:1px 8px;border-radius:2px">默认</span>
+            <p style="font-weight:500;margin-bottom:6px">张三 138****8888</p>
+            <p style="font-size:13px;color:#999">北京市海淀区中关村大街 XX号 小米科技园</p>
+          </div>
+          <div style="border:1px solid #e0e0e0;border-radius:8px;padding:16px;display:flex;align-items:center;justify-content:center;color:#999;cursor:pointer">
+            + 新增地址
+          </div>
+        </div>
+      </div>
+
+      <!-- 我的收藏 -->
+      <div class="user-card tab-panel" id="panel-fav" style="display:none">
+        <h3>我的收藏</h3>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+          <div class="product-card" onclick="location.href='detail.html?id=1'">
+            <div class="prod-img" style="background:linear-gradient(135deg,#1a1a2e,#0f3460)">&#128241;</div>
+            <div class="prod-info"><h4>小米 15 Pro 5G</h4><span class="prod-price">¥4999</span></div>
+          </div>
+          <div class="product-card" onclick="location.href='detail.html?id=16'">
+            <div class="prod-img" style="background:linear-gradient(135deg,#333,#555)">&#8986;</div>
+            <div class="prod-info"><h4>Xiaomi Watch S4</h4><span class="prod-price">¥1199</span></div>
+          </div>
+          <div class="product-card" onclick="location.href='detail.html?id=17'">
+            <div class="prod-img" style="background:linear-gradient(135deg,#ff6700,#ff8c3a)">&#127911;</div>
+            <div class="prod-info"><h4>Xiaomi Buds 5 Pro</h4><span class="prod-price">¥699</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 优惠券 -->
+      <div class="user-card tab-panel" id="panel-coupon" style="display:none">
+        <h3>优惠券</h3>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+          <div style="background:linear-gradient(135deg,#ff6700,#ff8c3a);border-radius:8px;padding:20px;color:#fff">
+            <p style="font-size:28px;font-weight:bold;margin-bottom:4px">¥50</p>
+            <p style="font-size:13px;opacity:.9">满 1000 可用</p>
+            <p style="font-size:11px;opacity:.7;margin-top:8px">有效期至 2025-12-31</p>
+          </div>
+          <div style="background:linear-gradient(135deg,#1a1a2e,#333);border-radius:8px;padding:20px;color:#fff">
+            <p style="font-size:28px;font-weight:bold;margin-bottom:4px">¥100</p>
+            <p style="font-size:13px;opacity:.9">满 2000 可用</p>
+            <p style="font-size:11px;opacity:.7;margin-top:8px">有效期至 2025-12-31</p>
+          </div>
+          <div style="background:linear-gradient(135deg,#e94560,#ff6700);border-radius:8px;padding:20px;color:#fff">
+            <p style="font-size:28px;font-weight:bold;margin-bottom:4px">¥200</p>
+            <p style="font-size:13px;opacity:.9">满 5000 可用</p>
+            <p style="font-size:11px;opacity:.7;margin-top:8px">有效期至 2026-06-30</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-service">
+      <div class="service-item"><span class="icon">&#9989;</span> 1小时快修</div>
+      <div class="service-item"><span class="icon">&#9851;</span> 7天无理由退货</div>
+      <div class="service-item"><span class="icon">&#128666;</span> 免费配送</div>
+      <div class="service-item"><span class="icon">&#128179;</span> 分期免息</div>
+      <div class="service-item"><span class="icon">&#128274;</span> 安全支付</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between">
+      <span>Copyright &copy; 2025 小米商城 mi.com 版权所有</span>
+      <span class="bottom-links"><a href="javascript:;">隐私政策</a><a href="javascript:;">用户协议</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// 侧边栏 Tab 切换
+document.querySelectorAll('.user-menu a[data-tab]').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelectorAll('.user-menu a[data-tab]').forEach(function(l) { l.classList.remove('active'); });
+    link.classList.add('active');
+    var tab = link.dataset.tab;
+    document.querySelectorAll('.tab-panel').forEach(function(p) { p.style.display = 'none'; });
+    var panel = document.getElementById('panel-' + tab);
+    if (panel) panel.style.display = 'block';
+  });
+});
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

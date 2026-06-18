@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商品详情 - 小米商城</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-left">
+      <a href="index.html">小米商城</a><span>|</span>
+      <a href="javascript:;">MIUI</a><span>|</span>
+      <a href="javascript:;">IoT</a><span>|</span>
+      <a href="javascript:;">云服务</a>
+    </div>
+    <div class="top-right">
+      <a href="login.html">登录</a><span style="color:#424242">|</span>
+      <a href="login.html">注册</a><span style="color:#424242">|</span>
+      <a href="user.html">我的订单</a>
+      <a href="cart.html" class="cart-link">&#128722; 购物车<span class="cart-count" id="cartCount">0</span></a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="index.html">MI</a></div>
+    <ul class="nav-menu">
+      <li><a href="products.html">全部商品</a></li>
+      <li><a href="products.html?cat=phone">手机</a></li>
+      <li><a href="products.html?cat=tv">电视</a></li>
+      <li><a href="products.html?cat=laptop">笔记本</a></li>
+      <li><a href="products.html?cat=pad">平板</a></li>
+      <li><a href="products.html?cat=watch">穿戴</a></li>
+      <li><a href="products.html?cat=home">智能家居</a></li>
+      <li><a href="products.html?cat=audio">耳机音箱</a></li>
+    </ul>
+    <div class="header-search">
+      <input type="text" placeholder="搜索小米商品">
+      <button>&#128269;</button>
+    </div>
+  </div>
+</header>
+
+<div class="detail-page">
+  <div class="container">
+    <!-- 面包屑 -->
+    <div class="breadcrumb">
+      <a href="index.html">首页</a><span>&gt;</span>
+      <a href="products.html">全部商品</a><span>&gt;</span>
+      <a href="products.html?cat=phone" id="breadCat">手机</a><span>&gt;</span>
+      <span id="breadName">小米 15 Pro</span>
+    </div>
+
+    <!-- 商品主区域 -->
+    <div class="detail-main">
+      <div class="detail-gallery">
+        <div class="main-img" id="mainImg" style="background:linear-gradient(135deg,#1a1a2e,#0f3460)">&#128241;</div>
+        <div class="thumb-list">
+          <div class="thumb active" style="background:#1a1a2e" onclick="switchImg(0,this)">&#128241;</div>
+          <div class="thumb" style="background:#16213e" onclick="switchImg(1,this)">&#128241;</div>
+          <div class="thumb" style="background:#0f3460" onclick="switchImg(2,this)">&#128241;</div>
+          <div class="thumb" style="background:#3a1050" onclick="switchImg(3,this)">&#128241;</div>
+        </div>
+      </div>
+
+      <div class="detail-info">
+        <h2 id="prodName">小米 15 Pro 5G</h2>
+        <p class="detail-desc" id="prodDesc">徕卡光学镜头 | 骁龙 8 Gen 4 | 120W 超级快充 | 2K AMOLED 屏幕</p>
+        <div class="detail-price">
+          <span class="price-current"><span class="yen">¥</span><span id="prodPrice">4999</span></span>
+        </div>
+
+        <div class="detail-spec">
+          <h4>选择版本</h4>
+          <div class="spec-options" id="versionOpts">
+            <span class="spec-opt active" data-price="4999">12+256GB</span>
+            <span class="spec-opt" data-price="5499">16+512GB</span>
+            <span class="spec-opt" data-price="5999">16+1TB</span>
+          </div>
+        </div>
+
+        <div class="detail-spec">
+          <h4>选择颜色</h4>
+          <div class="spec-options" id="colorOpts">
+            <span class="spec-opt active">黑色</span>
+            <span class="spec-opt">白色</span>
+            <span class="spec-opt">岩石青</span>
+          </div>
+        </div>
+
+        <div class="detail-qty">
+          <h4>数量</h4>
+          <div class="qty-ctrl">
+            <button class="qty-minus">-</button>
+            <input type="text" value="1" id="qtyInput">
+            <button class="qty-plus">+</button>
+          </div>
+        </div>
+
+        <div class="detail-btns">
+          <button class="btn btn-primary" id="btnBuy">立即购买</button>
+          <button class="btn btn-outline" id="btnCart">加入购物车</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 详情Tab -->
+    <div class="detail-tabs">
+      <div class="tab-nav">
+        <a href="javascript:;" class="active">商品详情</a>
+        <a href="javascript:;">规格参数</a>
+        <a href="javascript:;">用户评价</a>
+      </div>
+      <div class="tab-content active" style="line-height:2;color:#666">
+        <h3 style="color:#333;margin-bottom:16px">产品亮点</h3>
+        <p>搭载新一代骁龙 8 Gen 4 移动平台，台积电 3nm 工艺，性能全面释放。</p>
+        <p>徕卡光学镜头，Summilux 大光圈，支持专业街拍模式。</p>
+        <p>6.73英寸 2K AMOLED 微曲屏，峰值亮度 3000nit，支持 120Hz LTPO 自适应刷新率。</p>
+        <p>120W 有线秒充 + 50W 无线快充，4880mAh 大电池，续航无忧。</p>
+        <p>IP68 防尘防水，金属中框 + 玻璃后盖，质感出众。</p>
+      </div>
+      <div class="tab-content">
+        <table class="spec-table">
+          <tr><td>处理器</td><td>骁龙 8 Gen 4 移动平台</td></tr>
+          <tr><td>屏幕</td><td>6.73" 2K AMOLED, 120Hz LTPO</td></tr>
+          <tr><td>后置相机</td><td>50MP主摄 + 50MP超广角 + 50MP长焦</td></tr>
+          <tr><td>前置相机</td><td>32MP 高清自拍</td></tr>
+          <tr><td>电池</td><td>4880mAh, 120W有线 + 50W无线</td></tr>
+          <tr><td>系统</td><td>Xiaomi HyperOS 2.0</td></tr>
+          <tr><td>机身尺寸</td><td>161.5 x 75.3 x 8.4mm</td></tr>
+          <tr><td>重量</td><td>约 213g</td></tr>
+        </table>
+      </div>
+      <div class="tab-content" style="line-height:2.4">
+        <p style="color:#ff6700;font-size:16px">★★★★★ 4.8分 · 已收获 12,680 条好评</p>
+        <p><strong>张先生</strong> ★★★★★ <span style="color:#999">2025-12-20</span><br>拍照效果非常好，徕卡调色很讨喜。续航也够用，充电速度飞快。</p>
+        <hr style="margin:12px 0;border-color:#f0f0f0">
+        <p><strong>李女士</strong> ★★★★★ <span style="color:#999">2025-12-18</span><br>从iPhone换过来的，系统流畅度完全不输。屏幕素质顶级。</p>
+        <hr style="margin:12px 0;border-color:#f0f0f0">
+        <p><strong>王同学</strong> ★★★★☆ <span style="color:#999">2025-12-15</span><br>整体满意，手感很好。希望后续系统更新能进一步优化功耗。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-service">
+      <div class="service-item"><span class="icon">&#9989;</span> 1小时快修</div>
+      <div class="service-item"><span class="icon">&#9851;</span> 7天无理由退货</div>
+      <div class="service-item"><span class="icon">&#128666;</span> 免费配送</div>
+      <div class="service-item"><span class="icon">&#128179;</span> 分期免息</div>
+      <div class="service-item"><span class="icon">&#128274;</span> 安全支付</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between">
+      <span>Copyright &copy; 2025 小米商城 mi.com 版权所有</span>
+      <span class="bottom-links"><a href="javascript:;">隐私政策</a><a href="javascript:;">用户协议</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function switchImg(idx, el) {
+  var colors = ['#1a1a2e','#16213e','#0f3460','#3a1050'];
+  var img = document.getElementById('mainImg');
+  img.style.background = 'linear-gradient(135deg,' + colors[idx] + ',' + colors[idx] + 'cc)';
+  document.querySelectorAll('.thumb').forEach(function(t) { t.classList.remove('active'); });
+  el.classList.add('active');
+}
+
+// 商品数据映射
+var productData = {
+  1:{name:'小米 15 Pro 5G',cat:'phone',catName:'手机',desc:'徕卡光学镜头 | 骁龙8Gen4 | 120W快充',price:4999,color:'#1a1a2e',specs:['12+256GB','16+512GB','16+1TB'],specPrices:[4999,5499,5999]},
+  2:{name:'小米 15 标准版',cat:'phone',catName:'手机',desc:'徕卡影像 | 小尺寸旗舰 | 90W快充',price:3999,color:'#16213e',specs:['12+256GB','16+512GB'],specPrices:[3999,4499]},
+  3:{name:'Redmi K80 Pro',cat:'phone',catName:'手机',desc:'骁龙8Gen4 | 2K直屏 | 120W秒充',price:3299,color:'#3a1050',specs:['12+256GB','12+512GB','16+512GB'],specPrices:[3299,3599,3999]},
+  4:{name:'Redmi Note 14 Pro',cat:'phone',catName:'手机',desc:'2亿像素 | 大电池 | 高性价比',price:1799,color:'#e94560',specs:['8+128GB','8+256GB','12+256GB'],specPrices:[1799,1999,2199]},
+  5:{name:'Redmi Note 14',cat:'phone',catName:'手机',desc:'5000万主摄 | 5110mAh',price:1199,color:'#0a1628',specs:['6+128GB','8+128GB','8+256GB'],specPrices:[1199,1399,1599]},
+  6:{name:'小米 MIX Fold 4',cat:'phone',catName:'手机',desc:'折叠屏 | 徕卡四摄 | 轻薄',price:8999,color:'#1a1a2e',specs:['12+256GB','16+512GB'],specPrices:[8999,9999]},
+  7:{name:'Redmi Book Pro 16',cat:'laptop',catName:'笔记本',desc:'i9-14900HX | RTX4060 | 3.1K',price:6999,color:'#0f3460',specs:['i9/16GB/1TB','i9/32GB/1TB'],specPrices:[6999,7999]},
+  8:{name:'Xiaomi Book Pro 14',cat:'laptop',catName:'笔记本',desc:'Ultra 7 | 2.8K OLED | 轻薄',price:5999,color:'#1a3a5c',specs:['Ultra7/16GB/512GB','Ultra7/32GB/1TB'],specPrices:[5999,6999]},
+  9:{name:'Redmi Book 14',cat:'laptop',catName:'笔记本',desc:'i5-13500H | 2.8K | 学生本',price:4299,color:'#533483',specs:['i5/16GB/512GB','i5/16GB/1TB'],specPrices:[4299,4799]},
+  10:{name:'Xiaomi Book Air 13',cat:'laptop',catName:'笔记本',desc:'翻转触控 | 轻薄便携',price:4999,color:'#16213e',specs:['i5/8GB/512GB','i7/16GB/512GB'],specPrices:[4999,5999]},
+  11:{name:'小米电视 S Pro 65"',cat:'tv',catName:'电视',desc:'Mini LED | 144Hz | Dolby',price:3999,color:'#0a2018',specs:['65英寸','75英寸'],specPrices:[3999,5999]},
+  12:{name:'Redmi 智能电视 X65',cat:'tv',catName:'电视',desc:'4K HDR | 120Hz | 金属屏',price:2699,color:'#105040',specs:['55英寸','65英寸'],specPrices:[2199,2699]},
+  13:{name:'小米电视 S Pro 75"',cat:'tv',catName:'电视',desc:'Mini LED | 大师画质',price:5999,color:'#0a1628',specs:['75英寸','85英寸'],specPrices:[5999,7999]},
+  14:{name:'Redmi 智能电视 A55',cat:'tv',catName:'电视',desc:'4K超高清 | 智能语音',price:1599,color:'#16213e',specs:['43英寸','55英寸'],specPrices:[1299,1599]},
+  15:{name:'Xiaomi Pad 7 Pro',cat:'pad',catName:'平板',desc:'12.4" 3K屏 | 骁龙8Gen3',price:3299,color:'#333',specs:['8+256GB','12+256GB','12+512GB'],specPrices:[3299,3799,4299]},
+  16:{name:'Xiaomi Watch S4',cat:'watch',catName:'穿戴',desc:'AMOLED | eSIM | 15天续航',price:1199,color:'#444',specs:['运动款','尊享款'],specPrices:[1199,1599]},
+  17:{name:'Xiaomi Buds 5 Pro',cat:'audio',catName:'耳机音箱',desc:'Hi-Res | ANC降噪 | 空间音频',price:699,color:'#ff6700',specs:['标准版','尊享版'],specPrices:[699,899]},
+  18:{name:'Xiaomi 骨传导耳机',cat:'audio',catName:'耳机音箱',desc:'运动防水 | 12小时续航',price:599,color:'#1a1a2e',specs:['星空黑','皓月白'],specPrices:[599,599]},
+  19:{name:'Xiaomi 充电宝 20000mAh',cat:'audio',catName:'配件',desc:'50W双向快充 | 数显',price:249,color:'#e94560',specs:['20000mAh'],specPrices:[249]},
+  20:{name:'Redmi Pad SE',cat:'pad',catName:'平板',desc:'11"护眼屏 | 8000mAh',price:1299,color:'#3a1050',specs:['6+128GB','8+128GB'],specPrices:[1299,1499]},
+  21:{name:'Redmi Watch 5',cat:'watch',catName:'穿戴',desc:'AMOLED方屏 | 蓝牙通话',price:599,color:'#0f3460',specs:['运动款','皮革款'],specPrices:[599,699]},
+  22:{name:'小米智能音箱 Pro',cat:'home',catName:'智能家居',desc:'小爱同学 | Hi-Fi音质',price:399,color:'#1a1a2e',specs:['标准版'],specPrices:[399]},
+  23:{name:'小米空气净化器 5',cat:'home',catName:'智能家居',desc:'CADR 500m³/h | 除甲醛',price:1499,color:'#fff',specs:['标准版','Pro版'],specPrices:[1499,1999]},
+  24:{name:'小米智能门锁 2 Pro',cat:'home',catName:'智能家居',desc:'3D人脸识别 | 指纹',price:1899,color:'#333',specs:['标准版','Pro版'],specPrices:[1899,2299]}
+};
+
+var urlParams = new URLSearchParams(window.location.search);
+var prodId = parseInt(urlParams.get('id')) || 1;
+var data = productData[prodId] || productData[1];
+
+document.getElementById('prodName').textContent = data.name;
+document.getElementById('prodDesc').textContent = data.desc;
+document.getElementById('prodPrice').textContent = data.price;
+document.getElementById('breadName').textContent = data.name;
+document.getElementById('breadCat').textContent = data.catName;
+document.getElementById('breadCat').href = 'products.html?cat=' + data.cat;
+document.getElementById('mainImg').style.background = 'linear-gradient(135deg,' + data.color + ',' + data.color + 'cc)';
+document.querySelectorAll('.thumb').forEach(function(t) { t.style.background = data.color; });
+
+// 构建版本选项
+var verContainer = document.getElementById('versionOpts');
+verContainer.innerHTML = data.specs.map(function(s, i) {
+  return '<span class="spec-opt' + (i===0?' active':'') + '" data-price="' + data.specPrices[i] + '">' + s + '</span>';
+}).join('');
+
+// 版本切换
+verContainer.addEventListener('click', function(e) {
+  if (e.target.classList.contains('spec-opt')) {
+    verContainer.querySelectorAll('.spec-opt').forEach(function(o) { o.classList.remove('active'); });
+    e.target.classList.add('active');
+    document.getElementById('prodPrice').textContent = e.target.dataset.price;
+  }
+});
+
+// 颜色切换
+document.getElementById('colorOpts').addEventListener('click', function(e) {
+  if (e.target.classList.contains('spec-opt')) {
+    document.querySelectorAll('#colorOpts .spec-opt').forEach(function(o) { o.classList.remove('active'); });
+    e.target.classList.add('active');
+  }
+});
+
+// 获取当前选中规格
+function getSelectedSpec() {
+  var ver = document.querySelector('#versionOpts .active');
+  var col = document.querySelector('#colorOpts .active');
+  return (ver?ver.textContent:'') + ' ' + (col?col.textContent:'');
+}
+
+// 加入购物车
+document.getElementById('btnCart').addEventListener('click', function() {
+  var price = parseInt(document.getElementById('prodPrice').textContent);
+  App.addToCart({
+    id: 'd' + prodId,
+    name: data.name,
+    spec: getSelectedSpec(),
+    price: price,
+    img: data.color
+  }, parseInt(document.getElementById('qtyInput').value) || 1);
+});
+
+document.getElementById('btnBuy').addEventListener('click', function() {
+  var price = parseInt(document.getElementById('prodPrice').textContent);
+  App.addToCart({
+    id: 'd' + prodId,
+    name: data.name,
+    spec: getSelectedSpec(),
+    price: price,
+    img: data.color
+  }, parseInt(document.getElementById('qtyInput').value) || 1);
+  location.href = 'cart.html';
+});
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

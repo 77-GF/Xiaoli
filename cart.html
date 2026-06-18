@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>购物车 - 小米商城</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-left">
+      <a href="index.html">小米商城</a><span>|</span>
+      <a href="javascript:;">MIUI</a><span>|</span>
+      <a href="javascript:;">IoT</a>
+    </div>
+    <div class="top-right">
+      <a href="login.html">登录</a><span style="color:#424242">|</span>
+      <a href="login.html">注册</a><span style="color:#424242">|</span>
+      <a href="user.html">我的订单</a>
+      <a href="cart.html" class="cart-link">&#128722; 购物车<span class="cart-count" id="cartCount">0</span></a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="index.html">MI</a></div>
+    <ul class="nav-menu">
+      <li><a href="products.html">全部商品</a></li>
+      <li><a href="products.html?cat=phone">手机</a></li>
+      <li><a href="products.html?cat=tv">电视</a></li>
+      <li><a href="products.html?cat=laptop">笔记本</a></li>
+      <li><a href="products.html?cat=pad">平板</a></li>
+      <li><a href="products.html?cat=watch">穿戴</a></li>
+      <li><a href="products.html?cat=home">智能家居</a></li>
+      <li><a href="products.html?cat=audio">耳机音箱</a></li>
+    </ul>
+    <div class="header-search">
+      <input type="text" placeholder="搜索小米商品">
+      <button>&#128269;</button>
+    </div>
+  </div>
+</header>
+
+<div class="cart-page">
+  <div class="banner-sm" style="background:linear-gradient(135deg,#1a1a2e,#16213e)"><div class="container"><h2>我的购物车</h2></div></div>
+
+  <div class="container" style="padding-top:30px">
+
+    <!-- 购物车为空 -->
+    <div class="cart-empty" id="cartEmpty" style="display:none">
+      <div class="empty-icon">&#128722;</div>
+      <p>购物车还是空的，去看看心仪的商品吧</p>
+      <a href="products.html" class="btn-shop">去逛逛</a>
+    </div>
+
+    <!-- 购物车列表 -->
+    <div id="cartContent">
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th><!-- check --></th>
+            <th style="text-align:left">商品信息</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="cartBody"></tbody>
+      </table>
+
+      <div class="cart-bar">
+        <div class="cart-bar-left">
+          <span>已选 <strong id="cartItemCount">0</strong> 件商品</span>
+        </div>
+        <div class="cart-bar-right">
+          <span class="total-price">合计: <span class="num">¥<span id="cartTotal">0</span></span></span>
+          <button class="btn-checkout" id="btnCheckout">去结算</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-service">
+      <div class="service-item"><span class="icon">&#9989;</span> 1小时快修</div>
+      <div class="service-item"><span class="icon">&#9851;</span> 7天无理由退货</div>
+      <div class="service-item"><span class="icon">&#128666;</span> 免费配送</div>
+      <div class="service-item"><span class="icon">&#128179;</span> 分期免息</div>
+      <div class="service-item"><span class="icon">&#128274;</span> 安全支付</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between">
+      <span>Copyright &copy; 2025 小米商城 mi.com 版权所有</span>
+      <span class="bottom-links"><a href="javascript:;">隐私政策</a><a href="javascript:;">用户协议</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function renderCart() {
+  var cart = App.cart;
+  var body = document.getElementById('cartBody');
+  var empty = document.getElementById('cartEmpty');
+  var content = document.getElementById('cartContent');
+
+  if (cart.length === 0) {
+    empty.style.display = 'block';
+    content.style.display = 'none';
+    return;
+  }
+  empty.style.display = 'none';
+  content.style.display = 'block';
+
+  body.innerHTML = cart.map(function(item, i) {
+    return '<tr>' +
+      '<td>' + (i + 1) + '</td>' +
+      '<td>' +
+        '<div class="cart-product">' +
+          '<div class="cart-img" style="background:' + (item.img || '#333') + '">📱</div>' +
+          '<div>' +
+            '<div class="cart-name">' + item.name + '</div>' +
+            '<div class="cart-spec">' + item.spec + '</div>' +
+          '</div>' +
+        '</div>' +
+      '</td>' +
+      '<td><span class="cart-price">¥' + item.price + '</span></td>' +
+      '<td>' +
+        '<div class="qty-ctrl">' +
+          '<button class="qty-minus" data-idx="' + i + '">-</button>' +
+          '<input type="text" value="' + item.qty + '" data-idx="' + i + '" class="qty-input">' +
+          '<button class="qty-plus" data-idx="' + i + '">+</button>' +
+        '</div>' +
+      '</td>' +
+      '<td><span class="cart-price">¥' + (item.price * item.qty) + '</span></td>' +
+      '<td><span class="cart-delete" data-idx="' + i + '" title="删除">✕</span></td>' +
+    '</tr>';
+  }).join('');
+
+  updateSummary();
+}
+
+function updateSummary() {
+  document.getElementById('cartItemCount').textContent = App.cartCount();
+  document.getElementById('cartTotal').textContent = App.cartTotal();
+}
+
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('cart-delete')) {
+    App.removeFromCart(parseInt(e.target.dataset.idx));
+    renderCart();
+  }
+  if (e.target.classList.contains('qty-minus')) {
+    var idx = parseInt(e.target.dataset.idx);
+    if (App.cart[idx].qty > 1) {
+      App.updateCartQty(idx, App.cart[idx].qty - 1);
+      renderCart();
+    }
+  }
+  if (e.target.classList.contains('qty-plus')) {
+    var idx = parseInt(e.target.dataset.idx);
+    App.updateCartQty(idx, App.cart[idx].qty + 1);
+    renderCart();
+  }
+});
+
+document.addEventListener('change', function(e) {
+  if (e.target.classList.contains('qty-input')) {
+    var idx = parseInt(e.target.dataset.idx);
+    var qty = parseInt(e.target.value);
+    if (qty >= 1) {
+      App.updateCartQty(idx, qty);
+      renderCart();
+    }
+  }
+});
+
+document.getElementById('btnCheckout').addEventListener('click', function() {
+  if (App.cart.length === 0) return;
+  alert('订单提交成功！感谢您的购买。总金额: ¥' + App.cartTotal());
+  App.cart = [];
+  App.saveCart();
+  renderCart();
+});
+
+// 初始化
+renderCart();
+App.updateCartCount();
+</script>
+</body>
+</html>

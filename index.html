@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小米商城 - 小米手机、电视、智能硬件官方商城</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 顶部栏 -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-left">
+      <a href="index.html">小米商城</a><span>|</span>
+      <a href="javascript:;">MIUI</a><span>|</span>
+      <a href="javascript:;">IoT</a><span>|</span>
+      <a href="javascript:;">云服务</a><span>|</span>
+      <a href="javascript:;">金融</a><span>|</span>
+      <a href="javascript:;">有品</a>
+    </div>
+    <div class="top-right">
+      <a href="login.html">登录</a><span style="color:#424242">|</span>
+      <a href="login.html">注册</a><span style="color:#424242">|</span>
+      <a href="user.html">我的订单</a>
+      <a href="cart.html" class="cart-link">&#128722; 购物车<span class="cart-count" id="cartCount">0</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- 主导航 -->
+<header class="header">
+  <div class="container">
+    <div class="logo"><a href="index.html">MI</a></div>
+    <ul class="nav-menu">
+      <li><a href="products.html">全部商品</a>
+        <ul class="dropdown">
+          <li><a href="products.html?cat=phone">手机</a></li>
+          <li><a href="products.html?cat=tv">电视</a></li>
+          <li><a href="products.html?cat=laptop">笔记本</a></li>
+          <li><a href="products.html?cat=pad">平板</a></li>
+          <li><a href="products.html?cat=watch">智能穿戴</a></li>
+          <li><a href="products.html?cat=audio">耳机音箱</a></li>
+        </ul>
+      </li>
+      <li><a href="products.html?cat=phone">手机</a></li>
+      <li><a href="products.html?cat=tv">电视</a></li>
+      <li><a href="products.html?cat=laptop">笔记本</a></li>
+      <li><a href="products.html?cat=pad">平板</a></li>
+      <li><a href="products.html?cat=watch">穿戴</a></li>
+      <li><a href="products.html?cat=home">智能家居</a></li>
+      <li><a href="products.html?cat=audio">耳机音箱</a></li>
+    </ul>
+    <div class="header-search">
+      <input type="text" placeholder="搜索小米商品">
+      <button>&#128269;</button>
+    </div>
+  </div>
+</header>
+
+<!-- 轮播横幅 -->
+<section class="banner">
+  <div class="slides">
+    <div class="slide" style="background:linear-gradient(135deg,#0a1628,#1a3a5c)">
+      <div class="slide-content">
+        <h2>小米 15 Pro</h2>
+        <p>徕卡光学镜头  |  骁龙 8 Gen 4  |  120W 超级快充</p>
+        <a href="detail.html?id=1" class="btn">立即购买</a>
+      </div>
+    </div>
+    <div class="slide" style="background:linear-gradient(135deg,#1a0a1e,#3a1050)">
+      <div class="slide-content">
+        <h2>Redmi Book Pro 2025</h2>
+        <p>3.1K 超清屏  |  13代酷睿  |  轻薄金属机身</p>
+        <a href="detail.html?id=7" class="btn">立即购买</a>
+      </div>
+    </div>
+    <div class="slide" style="background:linear-gradient(135deg,#0a2018,#105040)">
+      <div class="slide-content">
+        <h2>小米电视 S Pro</h2>
+        <p>Mini LED  |  144Hz 高刷  |  Dolby Atmos 全景声</p>
+        <a href="detail.html?id=13" class="btn">立即购买</a>
+      </div>
+    </div>
+  </div>
+  <div class="banner-arrow banner-prev">&#10094;</div>
+  <div class="banner-arrow banner-next">&#10095;</div>
+  <div class="banner-dots">
+    <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+  </div>
+</section>
+
+<!-- 商品分类 -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd"><h2>热门分类</h2></div>
+    <div class="categories">
+      <a class="cat-card" href="products.html?cat=phone">
+        <div class="cat-icon">&#128241;</div><h4>手机</h4>
+      </a>
+      <a class="cat-card" href="products.html?cat=tv">
+        <div class="cat-icon">&#128250;</div><h4>电视</h4>
+      </a>
+      <a class="cat-card" href="products.html?cat=laptop">
+        <div class="cat-icon">&#128187;</div><h4>笔记本</h4>
+      </a>
+      <a class="cat-card" href="products.html?cat=pad">
+        <div class="cat-icon">&#128421;</div><h4>平板</h4>
+      </a>
+      <a class="cat-card" href="products.html?cat=watch">
+        <div class="cat-icon">&#8986;</div><h4>智能穿戴</h4>
+      </a>
+      <a class="cat-card" href="products.html?cat=audio">
+        <div class="cat-icon">&#127911;</div><h4>耳机音箱</h4>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 推荐商品 -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd"><h2>手机热销</h2><a href="products.html?cat=phone" class="more">查看全部 &gt;</a></div>
+    <div class="product-grid">
+
+      <div class="product-card" onclick="location.href='detail.html?id=1'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#1a1a2e,#0f3460)"><span class="prod-tag">新品</span>&#128241;</div>
+        <div class="prod-info">
+          <h4>小米 15 Pro 5G</h4>
+          <p class="prod-desc">徕卡光学 / 骁龙8Gen4 / 120W快充</p>
+          <span class="prod-price">¥4999 <span class="old">¥5299</span></span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p1',name:'小米 15 Pro 5G',spec:'12+256GB 黑色',price:4999,img:'#1a1a2e'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p1',name:'小米 15 Pro 5G',spec:'12+256GB 黑色',price:4999,img:'#1a1a2e'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="location.href='detail.html?id=2'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#16213e,#0f3460)">&#128241;</div>
+        <div class="prod-info">
+          <h4>小米 15 标准版</h4>
+          <p class="prod-desc">徕卡影像 / 小尺寸旗舰 / 90W快充</p>
+          <span class="prod-price">¥3999</span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p2',name:'小米 15 标准版',spec:'12+256GB 白色',price:3999,img:'#16213e'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p2',name:'小米 15 标准版',spec:'12+256GB 白色',price:3999,img:'#16213e'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="location.href='detail.html?id=3'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#1a1a2e,#3a1050)">&#128241;</div>
+        <div class="prod-info">
+          <h4>Redmi K80 Pro</h4>
+          <p class="prod-desc">骁龙8Gen4 / 2K直屏 / 120W秒充</p>
+          <span class="prod-price">¥3299 <span class="old">¥3599</span></span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p3',name:'Redmi K80 Pro',spec:'12+512GB 晴雪',price:3299,img:'#1a1a2e'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p3',name:'Redmi K80 Pro',spec:'12+512GB 晴雪',price:3299,img:'#1a1a2e'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="location.href='detail.html?id=4'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#e94560,#533483)">&#128241;</div>
+        <div class="prod-info">
+          <h4>Redmi Note 14 Pro</h4>
+          <p class="prod-desc">2亿像素 / 大电池 / 高性价比</p>
+          <span class="prod-price">¥1799</span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p4',name:'Redmi Note 14 Pro',spec:'8+256GB 子夜黑',price:1799,img:'#e94560'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p4',name:'Redmi Note 14 Pro',spec:'8+256GB 子夜黑',price:1799,img:'#e94560'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 笔记本推荐 -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd"><h2>笔记本推荐</h2><a href="products.html?cat=laptop" class="more">查看全部 &gt;</a></div>
+    <div class="product-grid">
+
+      <div class="product-card" onclick="location.href='detail.html?id=7'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#0f3460,#16213e)">&#128187;</div>
+        <div class="prod-info">
+          <h4>Redmi Book Pro 16</h4>
+          <p class="prod-desc">i9-14900HX / RTX4060 / 3.1K屏</p>
+          <span class="prod-price">¥6999</span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p7',name:'Redmi Book Pro 16',spec:'i9/16GB/1TB',price:6999,img:'#0f3460'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p7',name:'Redmi Book Pro 16',spec:'i9/16GB/1TB',price:6999,img:'#0f3460'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="location.href='detail.html?id=8'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#1a1a2e,#3a3a5c)">&#128187;</div>
+        <div class="prod-info">
+          <h4>Xiaomi Book Pro 14</h4>
+          <p class="prod-desc">Ultra 7 / 2.8K OLED / 轻薄金属</p>
+          <span class="prod-price">¥5999</span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p8',name:'Xiaomi Book Pro 14',spec:'Ultra7/16GB/512GB',price:5999,img:'#1a1a2e'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p8',name:'Xiaomi Book Pro 14',spec:'Ultra7/16GB/512GB',price:5999,img:'#1a1a2e'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="location.href='detail.html?id=9'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#533483,#0f3460)">&#128187;</div>
+        <div class="prod-info">
+          <h4>Redmi Book 14</h4>
+          <p class="prod-desc">i5-13500H / 2.8K / 学生办公本</p>
+          <span class="prod-price">¥4299</span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p9',name:'Redmi Book 14',spec:'i5/16GB/512GB',price:4299,img:'#533483'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p9',name:'Redmi Book 14',spec:'i5/16GB/512GB',price:4299,img:'#533483'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="location.href='detail.html?id=10'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#16213e,#0a1628)">&#128187;</div>
+        <div class="prod-info">
+          <h4>Xiaomi Book Air 13</h4>
+          <p class="prod-desc">翻转触控 / 轻薄便携 / 长续航</p>
+          <span class="prod-price">¥4999</span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p10',name:'Xiaomi Book Air 13',spec:'i5/8GB/512GB',price:4999,img:'#16213e'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p10',name:'Xiaomi Book Air 13',spec:'i5/8GB/512GB',price:4999,img:'#16213e'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 智能穿戴推荐 -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd"><h2>智能穿戴与配件</h2><a href="products.html?cat=watch" class="more">查看全部 &gt;</a></div>
+    <div class="product-grid">
+
+      <div class="product-card" onclick="location.href='detail.html?id=16'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#333,#555)">&#8986;</div>
+        <div class="prod-info">
+          <h4>Xiaomi Watch S4</h4>
+          <p class="prod-desc">AMOLED / eSIM / 15天长续航</p>
+          <span class="prod-price">¥1199</span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p16',name:'Xiaomi Watch S4',spec:'曜石黑 运动款',price:1199,img:'#333'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p16',name:'Xiaomi Watch S4',spec:'曜石黑 运动款',price:1199,img:'#333'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="location.href='detail.html?id=17'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#ff6700,#ff8c3a)">&#127911;</div>
+        <div class="prod-info">
+          <h4>Xiaomi Buds 5 Pro</h4>
+          <p class="prod-desc">Hi-Res / ANC主动降噪 / 空间音频</p>
+          <span class="prod-price">¥699</span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p17',name:'Xiaomi Buds 5 Pro',spec:'陶瓷白',price:699,img:'#ff6700'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p17',name:'Xiaomi Buds 5 Pro',spec:'陶瓷白',price:699,img:'#ff6700'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="location.href='detail.html?id=18'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#1a1a2e,#333)">&#127911;</div>
+        <div class="prod-info">
+          <h4>Xiaomi 骨传导耳机</h4>
+          <p class="prod-desc">运动防水 / 12小时续航 / 轻量化</p>
+          <span class="prod-price">¥599</span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p18',name:'Xiaomi 骨传导耳机',spec:'星空黑',price:599,img:'#1a1a2e'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p18',name:'Xiaomi 骨传导耳机',spec:'星空黑',price:599,img:'#1a1a2e'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="location.href='detail.html?id=19'">
+        <div class="prod-img" style="background:linear-gradient(135deg,#e94560,#ff6700)">&#128267;</div>
+        <div class="prod-info">
+          <h4>Xiaomi 充电宝 20000mAh</h4>
+          <p class="prod-desc">50W双向快充 / 数显屏幕</p>
+          <span class="prod-price">¥249</span>
+          <div class="prod-actions">
+            <button class="btn-buy" onclick="event.stopPropagation();App.addToCart({id:'p19',name:'Xiaomi 充电宝 20000mAh',spec:'白色',price:249,img:'#e94560'})">立即购买</button>
+            <button class="btn-cart" onclick="event.stopPropagation();App.addToCart({id:'p19',name:'Xiaomi 充电宝 20000mAh',spec:'白色',price:249,img:'#e94560'})">加入购物车</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-service">
+      <div class="service-item"><span class="icon">&#9989;</span> 1小时快修</div>
+      <div class="service-item"><span class="icon">&#9851;</span> 7天无理由退货</div>
+      <div class="service-item"><span class="icon">&#128666;</span> 免费配送</div>
+      <div class="service-item"><span class="icon">&#128179;</span> 分期免息</div>
+      <div class="service-item"><span class="icon">&#128274;</span> 安全支付</div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>帮助中心</h4>
+        <ul>
+          <li><a href="javascript:;">账户管理</a></li>
+          <li><a href="javascript:;">购物指南</a></li>
+          <li><a href="javascript:;">订单操作</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>服务支持</h4>
+        <ul>
+          <li><a href="javascript:;">售后政策</a></li>
+          <li><a href="javascript:;">自助服务</a></li>
+          <li><a href="javascript:;">相关下载</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>线下门店</h4>
+        <ul>
+          <li><a href="javascript:;">小米之家</a></li>
+          <li><a href="javascript:;">服务网点</a></li>
+          <li><a href="javascript:;">授权体验店</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>关于小米</h4>
+        <ul>
+          <li><a href="javascript:;">公司介绍</a></li>
+          <li><a href="javascript:;">加入我们</a></li>
+          <li><a href="javascript:;">联系我们</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4 style="font-size:15px;color:#333">400-100-5678</h4>
+        <p class="contact-tip">周一至周日 8:00-18:00</p>
+        <a href="javascript:;" class="btn-contact">人工客服</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between">
+      <span>Copyright &copy; 2025 小米商城 mi.com 版权所有</span>
+      <span class="bottom-links">
+        <a href="javascript:;">隐私政策</a>
+        <a href="javascript:;">用户协议</a>
+        <a href="javascript:;">京ICP备XXXXXXXX号</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
